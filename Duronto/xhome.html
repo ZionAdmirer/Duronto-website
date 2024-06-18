@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duronto</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        header {
+            /* display: flex;  */
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 470px;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        }
+        header .logo {
+            font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: -980px;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        header nav img {
+            width: 24px;
+            margin-left: 15px;
+        }
+        .hero {
+            height: 100vh;
+            background: url('pexels-kubiceknov-924824.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            color: #00ffcc;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .hero .cta {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .hero .cta:hover {
+            background-color: #00e6b8;
+        }
+        .categories {
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .category {
+            background-color: #333333;
+            padding: 20px;
+            width: calc(33.333% - 40px);
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        .category img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .category h3 {
+            margin: 15px 0 10px;
+            color: #00ffcc;
+        }
+        .testimonials {
+            background-color: #222222;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .testimonials h2 {
+            color: #00ffcc;
+            margin-bottom: 30px;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial h4 {
+            margin-top: 10px;
+            color: #00e6b8;
+        }
+        .newsletter {
+            background-color: #333333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .newsletter h2 {
+            color: #00ffcc;
+            margin-bottom: 20px;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .newsletter button:hover {
+            background-color: #00e6b8;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer .social-icons {
+            margin: 20px 0;
+        }
+        footer .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Duronto</div>
+    <nav>
+        <a href="xabout.html">About Us</a>
+        <a href="xblogs.html">Blog</a>
+        <a href="xcontact.html">Contact</a>
+        <a href="xcart.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png" alt="Cart"></a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 id="headline">Unlock the Future of Shopping</h1>
+    <p>Discover innovative products with unbeatable deals.</p>
+    <a href="xgadgets.html" class="cta">Shop Now</a>
+</section>
+
+<section class="categories">
+    <div class="category">
+        <img src="pexels-pixabay-270640.jpg" alt="Tech Gadgets">
+        <h3>Tech Gadgets</h3>
+        <a href="xgadgets.html" class="cta">Tech Gadgets</a>
+    </div>
+    <div class="category">
+        <img src="pexels-olly-845434.jpg" alt="Fashion">
+        <h3>Fashion Forward</h3>
+        <a href="xfashion.html" class="cta">Fashion</a>
+    </div>
+    <div class="category">
+        <img src="pexels-kamo11235-667838.jpg" alt="Home Decorations">
+        <h3>Home Innovations</h3>
+        <a href="xhomedecoration.html" class="cta">Home Decorations</a>
+    </div>
+    <div class="category">
+        <img src="pexels-ivan-samkov-6648560.jpg" alt="Health & Wellness">
+        <h3>Health & Wellness</h3>
+        <a href="xhealth.html" class="cta">Health and Wellness</a>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+        <p>"Duronto offers an unparalleled shopping experience. The quality and variety of products are amazing!"</p>
+        <h4>- Alex J.</h4>
+    </div>
+    <div class="testimonial">
+        <p>"I found exactly what I was looking for, and the customer service was top-notch. Highly recommend!"</p>
+        <h4>- Samantha W.</h4>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+    </div>
+    <nav>
+        <a href="xpolicy.html">Privacy Policy</a>
+        <a href="xterms.html">Terms of Service</a>
+        <a href="xcontact.html">Contact Us</a>
+    </nav>
+</footer>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+
+   
+
+</body>
+</html>
+
+
+
+
+

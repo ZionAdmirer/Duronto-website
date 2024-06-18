@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duronto Shopping Cart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        header {
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+          font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: -33px;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .container {
+            padding-top: 80px; /* Space for fixed header */
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #333333;
+            padding: 20px;
+            width: calc(33.33% - 20px);
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            color: #00ffcc;
+        }
+        .product p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .product .price {
+            font-size: 18px;
+            color: #00e6b8;
+            margin-bottom: 10px;
+        }
+        .product .cta {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            padding: 8px 16px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        .product .cta:hover {
+            background-color: #00e6b8;
+        }
+        .product .add-to-cart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            padding: 5px 10px;
+            font-size: 14px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: none;
+        }
+        .product:hover .add-to-cart {
+            display: block;
+        }
+        .cart {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            width: 300px;
+            background-color: #333333;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+        .cart.active {
+            display: block;
+        }
+        .cart h2 {
+            margin-bottom: 10px;
+            color: #00ffcc;
+            font-size: 24px;
+        }
+        .cart ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #555555;
+        }
+        .cart li:last-child {
+            border-bottom: none;
+        }
+        .cart .total {
+            margin-top: 10px;
+            text-align: right;
+        }
+        .cart .total span {
+            font-size: 18px;
+            color: #00e6b8;
+            font-weight: bold;
+        }
+        .cart .checkout-btn {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .cart .checkout-btn:hover {
+            background-color: #00e6b8;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer .social-icons {
+            margin: 20px 0;
+        }
+        footer .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Duronto</div>
+    <nav>
+        <a href="#" id="cart-toggle">Cart</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="products">
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of Product 1 goes here.</p>
+            <p class="price">$99.99</p>
+            <a href="#" class="cta">View Details</a>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of Product 2 goes here.</p>
+            <p class="price">$129.99</p>
+            <a href="#" class="cta">View Details</a>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Description of Product 3 goes here.</p>
+            <p class="price">$79.99</p>
+            <a href="#" class="cta">View Details</a>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="product4.jpg" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Description of Product 4 goes here.</p>
+            <p class="price">$149.99</p>
+            <a href="#" class="cta">View Details</a>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <div class="total">Total: <span id="cart-total">$0.00</span></div>
+    <a href="#" class="checkout-btn">Checkout</a>
+</div>
+
+<footer>
+  <div class="social-icons">
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+  </div>
+  <nav>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="contact-us.html">Contact Us</a>
+  </nav>
+</footer>
+
+
+<script>
+    // Sample data for products
+    const products = [
+        { id: 1, name: "Product 1", price: 99.99 },
+        { id: 2, name: "Product 2", price: 129.99 },
+        { id: 3, name: "Product 3", price: 79.99 },
+        { id: 4, name: "Product 4", price: 149.99 }
+    ];
+
+    // Select elements
+    const cartToggle = document.getElementById('cart-toggle');
+    const cart = document.getElementById('cart');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    // Event listener for cart toggle
+    cartToggle.addEventListener('click', () => {
+        cart.classList.toggle('active');
+    });
+
+    // Add event listeners to 'Add to Cart' buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productIndex = button.parentElement.getAttribute('data-index');
+            addToCart(products[productIndex]);
+        });
+    });
+
+    // Function to add item to cart
+    function addToCart(product) {
+        const cartItem = document.createElement('li');
+        cartItem.innerHTML = `
+            <span>${product.name}</span>
+            <span>$${product.price.toFixed(2)}</span>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+
+        // Update cart total
+        let currentTotal = parseFloat(cartTotal.innerText.slice(1));
+        currentTotal += product.price;
+        cartTotal.innerText = `$${currentTotal.toFixed(2)}`;
+    }
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+
+</body>
+</html>

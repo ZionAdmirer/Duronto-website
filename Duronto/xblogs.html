@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        header {
+          display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        }
+        header .logo {
+          font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: 545px;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .content {
+            padding: 120px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content h1 {
+            font-size: 48px;
+            color: #00ffcc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .post {
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        .post img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .post h2 {
+            font-size: 32px;
+            color: #00ffcc;
+            margin: 20px 0 10px;
+        }
+        .post p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .post a {
+            color: #00e6b8;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 40px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Duronto</div>
+    <nav>
+      
+      
+      
+    </nav>
+</header>
+
+<section class="content">
+    <h1>Our Blog</h1>
+    <div class="post" style="animation-delay: 0s;">
+        <img src="https://source.unsplash.com/800x600/?technology,innovation" alt="Post Image">
+        <h2>The Future of Tech Gadgets</h2>
+        <p>Explore the latest innovations in technology and discover what the future holds for tech enthusiasts. From AI advancements to cutting-edge gadgets, our insights will keep you updated on the trends shaping the tech world.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="post" style="animation-delay: 0.1s;">
+        <img src="https://source.unsplash.com/800x600/?fashion,style" alt="Post Image">
+        <h2>Fashion Forward: Trends to Watch</h2>
+        <p>Stay ahead of the curve with our comprehensive guide to the latest fashion trends. Whether it's runway highlights or street style inspirations, we bring you the trends that will define the next season.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="post" style="animation-delay: 0.2s;">
+        <img src="https://source.unsplash.com/800x600/?home,decor" alt="Post Image">
+        <h2>Innovative Home Accessories</h2>
+        <p>Transform your living space with our selection of innovative home accessories. From smart home devices to stylish decor, find out how you can elevate your home environment with the latest products.</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="post" style="animation-delay: 0.3s;">
+        <img src="https://source.unsplash.com/800x600/?health,wellness" alt="Post Image">
+        <h2>Health & Wellness Tips</h2>
+        <p>Discover the best practices for maintaining your health and wellness. Our expert tips cover everything from fitness routines to mental health strategies, ensuring you live a balanced and fulfilling life.</p>
+        <a href="#">Read More</a>
+    </div>
+</section>
+
+<footer>
+    <nav>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</footer>
+
+<script>
+  window.onload = function() {
+      setTimeout(function() {
+          window.scrollTo(0, 0);
+      }, 0);
+  };
+
+  window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      // Calculate scroll percentage
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.clientHeight;
+      const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+      // Fade out the header gradually
+      header.style.opacity = 1 - (scrollPosition / 70);
+  });
+
+  // JavaScript for animations
+  document.addEventListener('DOMContentLoaded', function() {
+      // Hero section animation
+      const heroContent = document.querySelector('.hero-content');
+      heroContent.classList.add('show');
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Gadgets</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            max-width: 100vw; /* Ensure body does not exceed screen width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* background-color: #222222; */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+          font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: -33px;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        header nav img {
+            width: 24px;
+            margin-left: 15px;
+        }
+        .hero {
+            height: 60vh;
+            background: url('pexels-tima-miroshnichenko-7047612.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+          
+            padding: 0 20px;
+            margin-top: 80px; /* To ensure content is below the fixed header */
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            color: #00ffcc;
+            animation: fadeInDown 1s ease-out;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease-out;
+        }
+        .products {
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            background-color: #333333;
+            padding: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 15px 0 10px;
+            color: #00ffcc;
+        }
+        .product p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product .price {
+            font-size: 20px;
+            color: #00e6b8;
+            margin-bottom: 20px;
+        }
+        .product .cta {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product .cta:hover {
+            background-color: #00e6b8;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer .social-icons {
+            margin: 20px 0;
+        }
+        footer .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Duronto</div>
+    <nav>
+        
+          
+       
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 id="headline">Tech Gadgets</h1>
+    <p>Explore the latest in tech and electronics.</p>
+</section>
+
+<section class="products">
+    <div class="product">
+        <img src="SAMSUNG-GALAXY-S24-Ultra-5G-TITANIUM-VIOLET_01.jpg" alt="Product 1">
+        <h3>Samsung Galaxy-S24 SAMSUNG-GALAXY-S24-Ultra-5G-TITANIUM-VIOLET</h3>
+        <p>Samsung Galaxy S24 Ultra featuring a stunning 6.8-inch Dynamic AMOLED display, a powerful Exynos 2200 processor, and an advanced quad-camera system with 108MP resolution.</p>
+        <p class="price">$1903</p>
+        <a href="#" class="cta">Buy Now</a>
+    </div>
+    <div class="product">
+        <img src="c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.webp" alt="Product 2">
+        <h3>BOAT Airdopes 163</h3>
+        <p>Wireless Earbuds with Massive Playback of upto 17 Hour, IPX5 Water & Sweat Resistance, IWP Technology, Type C Interface.</p>
+        <p class="price">$199</p>
+        <a href="#" class="cta">Buy Now</a>
+    </div>
+    <div class="product">
+        <img src="90188AP01_1.webp" alt="Product 3">
+        <h3>Titan Smart 3 Watch</h3>
+        <p>Titan Smart 3 Watch with 4.85 cm AMOLED Display | 410 x 502 Pixel Resolution | AI Voice Assistant | Multiple Menu Styles</p>
+        <p class="price">$59.80</p>
+        <a href="#" class="cta">Buy Now</a>
+    </div>
+    <div class="product">
+        <img src="w100_omen_laptops_desktop_default.webp" alt="Product 4">
+        <h3>OMEN premium gaming laptop</h3>
+        <p>High refresh rate displays, gaming-class graphics. An OMEN rig won’t let you down
+
+          Up to 2560x1440 Quad High Definition (QHD) screens
+          Fast refresh rate of up to 165 Hz for gaming
+          Up to NVIDIA® GeForce® RTX 4090 graphics card
+          OMEN Tempest Cooling technology</p>
+        <p class="price">$1299</p>
+        <a href="#" class="cta">Buy Now</a>
+    </div>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+    </div>
+    <nav>
+        <a href="xpolicy.html">Privacy Policy</a>
+        <a href="xterms.html">Terms of Service</a>
+        <a href="xcontact.html">Contact Us</a>
+    </nav>
+</footer>
+
+<script>
+window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+
+</body>
+</html>

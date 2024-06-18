@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - VentureVault</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            max-width: 100vw; /* Ensure body does not exceed screen width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* background-color: #222222; */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+          font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: -33px;
+        }
+        .privacy {
+            padding: 100px 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .privacy h1 {
+            font-size: 48px;
+            color: #00ffcc;
+            margin-bottom: 20px;
+        }
+        .privacy p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -560px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">VentureVault</div>
+</header>
+
+<section class="privacy">
+    <h1>Privacy Policy</h1>
+    
+    <p>Your privacy is important to us. This Privacy Policy outlines how VentureVault collects, uses, maintains, and discloses information collected from users (each, a "User") of the VentureVault website ("Site").</p>
+    
+    <h2>Information We Collect</h2>
+    <p>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, place an order, subscribe to the newsletter, respond to a survey, fill out a form, and in connection with other activities, services, features, or resources we make available on our Site.</p>
+    
+    <h2>How We Use Collected Information</h2>
+    <p>VentureVault may collect and use Users personal information for the following purposes:</p>
+    <ul>
+        <li>To improve customer service</li>
+        <li>To personalize user experience</li>
+        <li>To process transactions</li>
+        <li>To send periodic emails</li>
+    </ul>
+    
+    <h2>Sharing Your Personal Information</h2>
+    <p>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers for the purposes outlined above.</p>
+    
+    <h2>Changes to This Privacy Policy</h2>
+    <p>VentureVault has the discretion to update this privacy policy at any time. We encourage Users to frequently check this page for any changes. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
+</section>
+
+<footer>
+    <nav>
+       
+        <a href="#">Terms of Service</a>
+      
+    </nav>
+</footer>
+
+<script>
+  window.onload = function() {
+         setTimeout(function() {
+             window.scrollTo(0, 0);
+         }, 0);
+     };
+
+   window.addEventListener('scroll', function() {
+ const header = document.querySelector('header');
+ // Calculate scroll percentage
+ const scrollPosition = window.scrollY;
+ const windowHeight = window.innerHeight;
+ const documentHeight = document.body.clientHeight;
+ const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+ // Fade out the header gradually
+ header.style.opacity = 1 - (scrollPosition / 70);
+});
+
+
+     // JavaScript for animations
+     document.addEventListener('DOMContentLoaded', function() {
+         // Hero section animation
+         const heroContent = document.querySelector('.hero-content');
+         heroContent.classList.add('show');
+     });
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        }
+      
+        header .logo {
+            font-size: 2rem;
+            text-align: center;
+
+            font-weight: bold;
+            color: #00ffcc;
+            margin-left: 545px;
+        }
+        .about {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .about h1, .about h2 {
+            font-size: 48px;
+            color: #00ffcc;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .about h2 {
+            font-size: 36px;
+            margin-top: 40px;
+        }
+        .about p {
+            font-size: 22px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 0.5s;
+        }
+        .about ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        .about ul li {
+            font-size: 22px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .about ul li:before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-size: 20px;
+            line-height: 18px;
+        }
+        .about img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        footer {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Duronto</div>
+</header>
+
+<section class="about">
+    <h1>About Us</h1>
+    <p>Welcome to Duronto! Our journey began with a simple vision: to revolutionize the shopping experience by offering cutting-edge products that cater to the needs of modern consumers. At Duronto, we believe in innovation, quality, and exceptional customer service. Our team is passionate about curating a diverse selection of items that inspire and empower our customers. We are dedicated to building a community where shopping is not just a transaction but an experience. Thank you for being a part of our story. Together, we are unlocking the future of retail.</p>
+    
+    <h2>A Note from Our CEO, Sankur Kundu</h2>
+    <p>Greetings,</p>
+    <p>At Duronto, our goal has always been to push the boundaries of what’s possible in retail. We strive to create a platform where every product tells a story of innovation and excellence. Our customers are at the heart of everything we do, and their satisfaction is our top priority. As we continue to grow and evolve, we remain committed to our core values of integrity, quality, and exceptional service. Thank you for your trust and support. Let’s continue this exciting journey together.</p>
+    <p>Warm regards,<br>Sankur Kundu, CEO</p>
+    
+    <h2>Our Mission</h2>
+    <ul>
+        <li>Innovation: Continuously seeking and providing the latest in technology and design.</li>
+        <li>Quality: Ensuring every product meets our high standards of excellence.</li>
+        <li>Customer Satisfaction: Prioritizing our customers' needs and exceeding their expectations.</li>
+    </ul>
+    <!-- <img src="https://source.unsplash.com/1600x900/?business,team" alt="Our Team"> -->
+</section>
+
+<footer>
+    <nav>
+        <a href="xpolicy.html">Privacy Policy</a>
+        <a href="xterms.html">Terms of Service</a>
+        <a href="xcontact.html">Contact Us</a>
+    </nav>
+</footer>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+
+</body>
+</html>
+
+
+
