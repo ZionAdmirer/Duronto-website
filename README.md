@@ -47,7 +47,7 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact
-For any questions, feedback, or inquiries, please contact us at email@example.com or visit our Contact Us page.
+For any questions, feedback, or inquiries, please contact us at durontoceo@gmail.com.com or visit our Contact Us page.
 
 Acknowledgements
 Icons used from Icons8
